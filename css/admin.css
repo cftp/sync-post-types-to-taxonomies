@@ -1,0 +1,12 @@
+span.fake-label {
+	vertical-align: middle;
+}
+
+ul.sptt-links-to {
+	margin-left: 1em;
+}
+
+ul.sptt-links-to li {
+	list-style-type: disc;
+	margin-left: 1em;
+}
