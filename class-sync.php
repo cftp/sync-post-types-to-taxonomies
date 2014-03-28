@@ -551,10 +551,11 @@ class SPTT_Sync extends SPTT_Plugin {
 		$post_type = $this->taxonomy_syncs_with( $taxonomy );
 		if ( ! $post_type )
 			return;
-	
+		
+		$post_status = apply_filters( 'sptt_post_status', 'publish', $term, $post_type, $post_id );
 		$post_data = array(
 			'post_name' => $term->slug,
-			'post_status' => 'publish',
+			'post_status' => $post_status,
 			'post_title' => $term->name,
 			'post_type' => $post_type,
 		);
